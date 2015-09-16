@@ -26,6 +26,7 @@ public class PlayTest {
 
     @Test
     public void fightTest() throws Exception {
+
         throw new Exception();
     }
 
