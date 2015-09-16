@@ -6,4 +6,8 @@ package com.wulin.domain;
 public class Act {
     KungFu kungFu;
     String name;
+
+    public Act(String name){
+        this.name = name;
+    }
 }

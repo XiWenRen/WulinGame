@@ -21,8 +21,16 @@ public class Role {
         this.sect = sect;
     }
 
+    public String getName(){
+        return this.name;
+    }
+
     public void addKungFu(KungFu kungFu){
         kungFuList.add(kungFu);
+    }
+
+    public List<KungFu> getKungFuList(){
+        return kungFuList;
     }
 
     @Override
