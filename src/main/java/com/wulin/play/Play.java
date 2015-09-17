@@ -2,7 +2,7 @@ package com.wulin.play;
 
 
 import com.wulin.application.Scene;
-import com.wulin.application.impl.FighterScene;
+import com.wulin.application.impl.FightScene;
 import com.wulin.domain.KungFu;
 import com.wulin.domain.Role;
 import com.wulin.domain.Sect;
@@ -15,7 +15,6 @@ public class Play {
         KungFu taijiSword = new KungFu("太极剑");
         role.addKungFu(taijiFist);
         role.addKungFu(taijiSword);
-//        System.out.println(role.toString());
 
         Sect heroSect = new Sect("全真");
         Role hero = new Role("李逍遥",heroSect);
@@ -23,9 +22,6 @@ public class Play {
         KungFu heroKF2 = new KungFu("万剑诀");
         hero.addKungFu(heroKF1);
         hero.addKungFu(heroKF2);
-
-        Scene fightScene = new FighterScene(role, hero);
-        fightScene.run();
 
     }
 
@@ -45,8 +41,8 @@ public class Play {
      * @return 战斗信息(暂时战斗场景能够满足了)
      */
     public Scene fight(Role role1, Role role2){
-        Scene fightScene = new FighterScene(role1, role2);
-        fightScene.run();
+        Scene fightScene = new FightScene();
+//        fightScene.run();
         return fightScene;
     }
 

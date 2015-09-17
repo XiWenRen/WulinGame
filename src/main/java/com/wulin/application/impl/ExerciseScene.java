@@ -1,6 +1,7 @@
 package com.wulin.application.impl;
 
 import com.wulin.application.Scene;
+import com.wulin.domain.SEAdapter;
 
 /**
  * 练功场景类
@@ -10,19 +11,6 @@ import com.wulin.application.Scene;
  * 2.储存练功进度信息，包括人物属性增长/降低
  * 3.中途如果失败的处理
  */
-public class ExerciseScene implements Scene{
-    @Override
-    public void init() {
+public class ExerciseScene{
 
-    }
-
-    @Override
-    public void destory() {
-
-    }
-
-    @Override
-    public void run() {
-
-    }
 }
