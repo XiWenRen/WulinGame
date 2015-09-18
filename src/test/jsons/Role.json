@@ -1,0 +1,38 @@
+[
+  {
+    "name": "李逍遥",
+    "sect": {
+      "name": "全真",
+      "roleList": [],
+      "kungFuList": []
+    },
+    "kungFuList": [
+      {
+        "name": "御剑诀",
+        "actList": []
+      },
+      {
+        "name": "万剑诀",
+        "actList": []
+      }
+    ]
+  },
+  {
+    "name": "张四风",
+    "sect": {
+      "name": "武当",
+      "roleList": [],
+      "kungFuList": []
+    },
+    "kungFuList": [
+      {
+        "name": "太极拳",
+        "actList": []
+      },
+      {
+        "name": "太极剑",
+        "actList": []
+      }
+    ]
+  }
+]
