@@ -1,12 +1,6 @@
-package com.wulin.application.impl;
+package com.wulin.scene.impl;
 
-import com.wulin.application.Event;
-import com.wulin.application.Scene;
-import com.wulin.domain.Role;
-import com.wulin.domain.SEAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.wulin.scene.Scene;
 
 /**
  * 战斗场景

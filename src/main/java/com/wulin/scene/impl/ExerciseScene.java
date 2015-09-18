@@ -1,7 +1,4 @@
-package com.wulin.application.impl;
-
-import com.wulin.application.Scene;
-import com.wulin.domain.SEAdapter;
+package com.wulin.scene.impl;
 
 /**
  * 练功场景类

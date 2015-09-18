@@ -1,9 +1,10 @@
-package com.wulin.application;
+package com.wulin.scene;
 
+import com.wulin.event.Event;
 import com.wulin.domain.Role;
-import com.wulin.domain.SEAdapter;
+import com.wulin.adapter.impl.SEAdapter;
 import com.wulin.exception.RolesOverFlowException;
-import com.wulin.play.Play;
+import com.wulin.util.LogUtil;
 
 /**
  * 场景的接口
@@ -18,23 +19,19 @@ public interface Scene {
 
     /**
      * 用来产生场景对应的事件的方法
-     * @return
+     * @return 场景对应的事件
      */
     default Event getEvent(){
-        String clsName = this.getClass().getTypeName();
+        String clsName = this.getClass().getSimpleName();
         String scene = "Scene";
         String eventName = clsName.substring(0,clsName.length() - scene.length());
-        eventName += "Event";
+        eventName = "com.wulin.event.impl." + eventName + "Event";
         Event event = null;
         try {
             event = (Event) Class.forName(eventName).newInstance();
-            event.setAdapter(this.adapter);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            event.setAdapter(adapter);
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+            LogUtil.logError(e);
         }
         return event;
     }
@@ -42,6 +39,7 @@ public interface Scene {
     default void addRole(Role... roles){
         if(roles.length > 2)
             throw new RolesOverFlowException(2);
+
         for(Role role : roles){
             adapter.addData(role);
         }

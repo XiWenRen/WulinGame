@@ -1,4 +1,4 @@
-package com.wulin.domain;
+package com.wulin.adapter.impl;
 
 import java.util.ArrayList;
 import java.util.List;

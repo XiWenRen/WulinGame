@@ -1,7 +1,7 @@
-package com.wulin.application;
+package com.wulin.event;
 
 import com.wulin.domain.Role;
-import com.wulin.domain.SEAdapter;
+import com.wulin.adapter.impl.SEAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
